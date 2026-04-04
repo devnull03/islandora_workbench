@@ -7781,6 +7781,22 @@ def validate_csv_field_cardinality(
                             + row["node_id"]
                             + " contains more values than the number "
                         )
+                    elif config["task"] == "create_terms":
+                        message = (
+                            'CSV field "'
+                            + field_name
+                            + '" in record with term name '
+                            + row["term_name"]
+                            + " contains more values than the number "
+                        )
+                    elif config["task"] == "update_terms":
+                        message = (
+                            'CSV field "'
+                            + field_name
+                            + '" in record with term ID '
+                            + row["term_id"]
+                            + " contains more values than the number "
+                        )                        
                     message_2 = (
                         "allowed for that field ("
                         + str(field_cardinalities[field_name])
@@ -7807,6 +7823,22 @@ def validate_csv_field_cardinality(
                             + field_name
                             + '" in record with node ID '
                             + row["node_id"]
+                            + " contains more values than the number "
+                        )
+                    elif config["task"] == "create_terms":
+                        message = (
+                            'CSV field "'
+                            + field_name
+                            + '" in record with term name '
+                            + row["term_name"]
+                            + " contains more values than the number "
+                        )
+                    elif config["task"] == "update_terms":
+                        message = (
+                            'CSV field "'
+                            + field_name
+                            + '" in record with term ID '
+                            + row["term_id"]
                             + " contains more values than the number "
                         )
                     message_2 = (
