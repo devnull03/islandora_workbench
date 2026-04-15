@@ -4260,9 +4260,9 @@ def check_input(config: dict, args: Namespace) -> None:
                 + '"'
             )
             if os.name == "nt":
-                # Assumes python.exe is in the user's PATH.
+                # Reuse the current interpreter so uv/venv dependencies are available.
                 cmd = [
-                    "python",
+                    sys.executable,
                     "./workbench",
                     "--config",
                     secondary_config_file,

@@ -4,7 +4,7 @@ setup(
     name="Islandora Workbench",
     version="0.1.dev0",
     author="Mark Jordan",
-    author_email="mjordan@sfu",
+    author_email="mjordan@sfu.ca",
     description="A command-line tool that allows creation, updating, and deletion of Islandora content.",
     url="https://github.com/mjordan/islandora_workbench",
     license="MIT",

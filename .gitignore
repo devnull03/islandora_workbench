@@ -4,4 +4,4 @@ Islandora_Workbench.egg-info/
 dist/
 tests_local/
 rollback.*
-credentials*.yaml
+credentials*.y*ml
