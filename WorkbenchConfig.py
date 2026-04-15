@@ -8,6 +8,7 @@ from rich.table import Table
 
 
 class WorkbenchConfig:
+    user_mods: dict
     def __init__(self, args):
         self.args = args
         self.user_mods = self.get_user_config()
@@ -97,7 +98,7 @@ class WorkbenchConfig:
     def get_config(self):
         try:
             config = self.get_default_config()
-            # user_mods = self.get_user_config()
+            user_mods = self.get_user_config()
         except KeyboardInterrupt:
             try:
                 sys.exit(0)
